@@ -1,0 +1,75 @@
+{
+  "name": "ftboilerplate",
+  "private": true,
+  "scripts": {
+    "start": "meteor run",
+    "install-assets": "cp -fRv ./node_modules/semantic-ui-css/themes ./public/"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.1.2",
+    "bcrypt": "^3.0.1",
+    "classnames": "^2.2.6",
+    "meteor-node-stubs": "^0.4.1",
+    "prop-types": "^15.6.2",
+    "react": "^16.5.2",
+    "react-addons-pure-render-mixin": "^15.6.2",
+    "react-dom": "^16.5.2",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "rxjs": "^6.3.3",
+    "semantic-ui-css": "^2.4.0",
+    "semantic-ui-react": "^0.82.5",
+    "undux": "^5.0.0-beta.17"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.6.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-meteor": "^5.1.0",
+    "eslint-plugin-react": "^7.11.1"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "plugins": [
+      "meteor",
+      "react"
+    ],
+    "extends": [
+      "airbnb/base",
+      "plugin:meteor/guide",
+      "plugin:react/recommended"
+    ],
+    "env": {
+      "browser": true
+    },
+    "globals": {
+      "server": false,
+      "browser": false,
+      "expect": false
+    },
+    "rules": {
+      "import/no-unresolved": 0,
+      "import/no-extraneous-dependencies": 0,
+      "import/extensions": 0,
+      "no-underscore-dangle": [
+        "error",
+        {
+          "allow": [
+            "_id",
+            "_ensureIndex",
+            "_verifyEmailToken",
+            "_resetPasswordToken",
+            "_name"
+          ]
+        }
+      ],
+      "class-methods-use-this": 0
+    }
+  }
+}
