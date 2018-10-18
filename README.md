@@ -1,1 +1,1 @@
-# meteor_undux
+# undux_boilerplate

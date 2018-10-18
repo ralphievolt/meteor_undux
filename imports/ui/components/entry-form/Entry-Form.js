@@ -38,12 +38,14 @@ class EntryForm extends Component {
   _handleClose = () => this.props.store.set("showFormEntry")(false);
 
   _handleSubmit = () => {
-    Meteor.call("add.Endorsement", this.state, (err, res) => {
+    Meteor.call("add.Department", this.state, (err, res) => {
       if (err) {
         alert(err.reason);
       } else {
-        alert("new endorsement added");
-        this.props.store.set("showFormEntry")(false);
+        this.setState({
+          department: ""
+        });
+        alert("new department added");
       }
     });
   };
